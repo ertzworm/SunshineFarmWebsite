@@ -121,6 +121,7 @@
   <script src="../semantic/dist/components/visibility.js"></script>
   <script src="../semantic/dist/components/sidebar.js"></script>
   <script src="../semantic/dist/components/transition.js"></script>
+  <script src="http://cdn.jsdelivr.net/jquery.glide/1.0.6/jquery.glide.min.js"></script>
   <script>
   $(document)
     .ready(function() {
@@ -142,6 +143,15 @@
       $('.ui.sidebar')
         .sidebar('attach events', '.toc.item')
       ;
+
+      $('.slider').glide({
+        autoplay: false,
+        arrowsWrapperClass: 'slider-arrows',
+        arrowRightText: '',
+        arrowLeftText: ''
+      });
+
+      $('.slider').glide();
 
     })
   ;
@@ -200,7 +210,7 @@
 
     <div class="ui text container">
       <h1 class="ui inverted header">
-        Imagine-a-Company
+       Sunshine Farm
       </h1>
       <h2>Do whatever you want when you want to.</h2>
       <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
