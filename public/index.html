@@ -147,11 +147,7 @@
         })
       ;
 
-      // create sidebar and attach to menu open
-      $('.ui.sidebar')
-        .sidebar('attach events', '.toc.item')
-      ;
-
+      
 	  $("a").on('click', function(event){
 		  if(this.hash != ""){
 			  event.preventDefault();
@@ -197,11 +193,9 @@
 
     <div class="ui container">
       <div class="ui large secondary inverted pointing menu" style="outline:none; border: 0px solid">
-        <a class="toc item">
-          <i class="sidebar icon"></i>
-        </a>
-        
-        <div class="item ui simple dropdown">
+        <div class="toc item">
+          <!-- <i class="sidebar icon"></i> --> asdasd
+          <div class="ui dropdown">
         	<h2><i class="sidebar icon"></i></h2>
         	<div class="menu">
         		<div class="item">
@@ -221,6 +215,29 @@
 				</div>
           </div>
         </div>
+          
+        </div>
+        
+        <div class="item ui simple dropdown">
+        	<h2><i class="sidebar icon"></i></h2>
+        	<div class="menu">
+        		<div class="item">
+					<a href="#home_anchor" class="ui black">Home</a>
+            	</div>
+
+				<div class="item">
+					<a href="#about_us_anchor" class="ui black">About Us</a>
+				</div>
+
+				<div class="item">
+					<a href="#services_anchor" class="ui black">Services</a>
+				</div>
+
+				<div class="item">
+					<a href="#contact_us_anchor" class="ui black">Contact Us</a>
+				</div>
+          </div>
+        </div>
 
         <!-- <a class="ui item right">
           <i class="sidebar icon"></i>
@@ -232,7 +249,7 @@
     </div>
     
 
-    <div class="ui text container">
+    <div class="ui text container" id="home_anchor">
       <h1 class="ui inverted header">
        Sunshine Farm
       </h1>
@@ -279,7 +296,7 @@
     </div>
   </div>
 
-  <div class="ui vertical stripe segment">
+  <div class="ui vertical stripe segment" id="services_anchor">
     <div class="ui text container">
       <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
       <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p>
