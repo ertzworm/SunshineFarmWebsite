@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <!-- Site Properties -->
-  <title>Homepage - Semantic</title>
+  <title>Sunflower Farm!</title>
   <link rel="stylesheet" type="text/css" href="../semantic/dist/components/reset.css">
   <link rel="stylesheet" type="text/css" href="../semantic/dist/components/site.css">
 
@@ -27,6 +27,9 @@
   <link rel="stylesheet" type="text/css" href="../semantic/dist/components/sidebar.css">
   <link rel="stylesheet" type="text/css" href="../semantic/dist/components/transition.css">
 
+  <link href="http://jeffry.in/old-jeffry-in/css/jeffry.in.css" rel="stylesheet" />
+  <link href="http://jeffry.in/old-jeffry-in/css/jeffry.in.slider.css" rel="stylesheet" />
+
   <style type="text/css">
 
     .hidden.menu {
@@ -37,6 +40,7 @@
       min-height: 700px;
       padding: 1em 0em;
     }
+
     .masthead .logo.item img {
       margin-right: 1em;
     }
@@ -112,6 +116,10 @@
         margin-top: 0.5em;
         font-size: 1.5em;
       }
+
+	  a{
+		color: black;
+	  }
     }
 
 
@@ -144,15 +152,19 @@
         .sidebar('attach events', '.toc.item')
       ;
 
-      $('.slider').glide({
-        autoplay: false,
-        arrowsWrapperClass: 'slider-arrows',
-        arrowRightText: '',
-        arrowLeftText: ''
-      });
+	  $("a").on('click', function(event){
+		  if(this.hash != ""){
+			  event.preventDefault();
 
-      $('.slider').glide();
+			  var hash = this.hash;
 
+			  $('html, body').animate({
+				  scrollTop: $(hash).offset().top
+			  }, 800, function(){
+				  window.location.hash = hash;
+			  })
+		  }
+	  });
     })
   ;
   </script>
@@ -162,51 +174,63 @@
 <!-- Following Menu -->
 <div class="ui large top fixed hidden menu">
   <div class="ui container">
-    <a class="active item">Home</a>
-    <a class="item">Work</a>
-    <a class="item">Company</a>
-    <a class="item">Careers</a>
-    <div class="right menu">
-      <div class="item">
-        <a class="ui button">Log in</a>
-      </div>
-      <div class="item">
-        <a class="ui primary button">Sign Up</a>
-      </div>
+    <a class="item" href="#about_us_anchor">Home</a>
+    <a class="item">About Us</a>
+    <a class="item">Services</a>
+    <a class="item" href="#contact_us_anchor">Contact Us</a>
     </div>
   </div>
 </div>
 
 <!-- Sidebar Menu -->
 <div class="ui vertical inverted sidebar menu">
-  <a class="active item">Home</a>
-  <a class="item">Work</a>
-  <a class="item">Company</a>
-  <a class="item">Careers</a>
-  <a class="item">Login</a>
-  <a class="item">Signup</a>
+  <a class="item">Home</a>
+  <a class="item" href="#about_us_anchor">About Us</a>
+  <a class="item">Services</a>
+  <a class="item" href="#contact_us_anchor">Contact Us</a>
 </div>
 
 
 <!-- Page Contents -->
 <div class="pusher">
-  <div class="ui inverted vertical masthead center aligned segment">
+  <div class="ui inverted vertical masthead center aligned segment" style="background-image:url('../images/landing1.jpg');background-repeat:no-repeat;background-size:cover">
 
     <div class="ui container">
-      <div class="ui large secondary inverted pointing menu">
+      <div class="ui large secondary inverted pointing menu" style="outline:none; border: 0px solid">
         <a class="toc item">
           <i class="sidebar icon"></i>
         </a>
-        <a class="active item">Home</a>
-        <a class="item">Work</a>
-        <a class="item">Company</a>
-        <a class="item">Careers</a>
-        <div class="right item">
-          <a class="ui inverted button">Log in</a>
-          <a class="ui inverted button">Sign Up</a>
+        
+        <div class="item ui simple dropdown">
+        	<h2><i class="sidebar icon"></i></h2>
+        	<div class="menu">
+        		<div class="item">
+					<a href="" class="ui black">Home</a>
+            	</div>
+
+				<div class="item">
+					<a href="#about_us_anchor" class="ui black">About Us</a>
+				</div>
+
+				<div class="item">
+					<a href="#" class="ui black">Services</a>
+				</div>
+
+				<div class="item">
+					<a href="#contact_us_anchor" class="ui black">Contact Us</a>
+				</div>
+          </div>
         </div>
+
+        <!-- <a class="ui item right">
+          <i class="sidebar icon"></i>
+        </a>
+         -->
       </div>
+
+      
     </div>
+    
 
     <div class="ui text container">
       <h1 class="ui inverted header">
@@ -216,26 +240,24 @@
       <div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
     </div>
 
+
+
   </div>
 
-  <div class="ui vertical stripe segment">
+  <div class="ui vertical stripe segment" id="about_us_anchor">
     <div class="ui middle aligned stackable grid container">
       <div class="row">
         <div class="eight wide column">
-          <h3 class="ui header">We Help Companies and Companions</h3>
+          <h3 class="ui header centered">About Us</h3>
           <p>We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs...through pure data analytics.</p>
-          <h3 class="ui header">We Make Bananas That Can Dance</h3>
+          <h3 class="ui header centered">Our Goal</h3>
           <p>Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.</p>
         </div>
         <div class="six wide right floated column">
           <img src="assets/images/wireframe/white-image.png" class="ui large bordered rounded image">
         </div>
       </div>
-      <div class="row">
-        <div class="center aligned column">
-          <a class="ui huge button">Check Them Out</a>
-        </div>
-      </div>
+      
     </div>
   </div>
 
@@ -272,7 +294,7 @@
   </div>
 
 
-  <div class="ui inverted vertical footer segment">
+  <div class="ui inverted vertical footer segment" id="contact_us_anchor">
     	<h1 class="ui center aligned header">
     	CONTACT US
   		</h1>
