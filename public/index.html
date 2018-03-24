@@ -168,6 +168,7 @@
 
 	</style>
 
+
 		<script src="../semantic/dist/jquery-3.3.1.min.js"></script>
 		<script src="../semantic/dist/components/visibility.js"></script>
 		<script src="../semantic/dist/components/sidebar.js"></script>
@@ -204,6 +205,13 @@
 						})
 					}
 				});
+
+				$('#ui.rating')
+				.rating({
+				  initialRating: 3,
+				  maxRating: 5
+				})
+			  ;
 
 			});
 		</script>
@@ -365,25 +373,41 @@
 		<a class="ui large button">I'm Still Quite Interested</a>
 		</div>
 	</div>
+	
+	<center>
+		<hr class="style-seven" />
+		
+	</center>
+	
 
 	<div class="ui vertical stripe quote segment">
+		<h2 class="ui header centered">Reviews</h2>
+		<h4 class="ui centered">Rated 4.9 out of 5 stars in 89 reviews</h4>
 		<div class="ui equal width stackable internally celled grid">
 			<div class="center aligned row">
 				<div class="column">
+
+					<img class="ui image circular centered" src="../images/vidal.jpg" />
+					
+					<p class="centered">Rosanna R. Vidal via Facebook</p>
+					Financial Advisor at Sun Life Financial Philippines
+
 					<h2>
 						"Sunshine Farm - a happy place filled with inspiration where persons with disabilities show that they have limitless abilities. Every peso that you give is a gift of love and hope....an opportunity to make a difference. 
 						
 						In exchange, you will have the sunniest Sunflower photo you can ever have without going to France or Spain."
 					</h2>
-
-					<p>Rosanna R. Vidal</p>
 				</div>
 
 				<div class="column">
-					<h3>"I shouldn't have gone with their competitor."</h3>
-						<p>
-						<img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Nan</b> Chief Fun Officer Acme Toys
-					</p>
+					<img class="ui image circular centered" src="../images/lopez.jpg" />
+					
+					<p class="centered">Ricky W. Lopez via Facebook</p>
+					Soap Maker, Marketer, Natural Beauty and Inclusiveness Advocate
+
+					<h2>
+						"Sunshine Farm is the happiest place on the planet! A Destination Farm like no other. Beautiful, joyful, inspiring! No one leaves the place without asking themselves the question - How can I make a difference by giving back to others? Kindness and love blooms in Tiaong!"
+					</h2>
 				</div>
 			</div>
 		</div>
