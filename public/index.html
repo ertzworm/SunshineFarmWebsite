@@ -3,7 +3,7 @@
 <html>
 	<head>
 	<!-- Logo -->
-	<link rel="shortcut icon" href="logo.ico" />
+	<link rel="shortcut icon" href="../images/logo.ico" />
 
 	<!-- Standard Meta -->
 	<meta charset="utf-8" />
@@ -142,26 +142,29 @@
 		}
 	}
 
-		#image_trans{
-			position: relative;
-		}
+	hr.style-seven {
+		
+		max-width: 30%;
+		overflow: visible; /* For IE */
+		height: 30px;
+		border-style: solid;
+		border-color: black;
+		border-width: 1px 0 0 0;
+		border-radius: 20px;
+	}
 
-		#image_trans img{
-			position:absolute;
-			left:0;
-			-webkit-transition: opacity 1s ease-in-out;
-			-moz-transition: opacity 1s ease-in-out;
-			-o-transition: opacity 1s ease-in-out;
-			transition: opacity 1s ease-in-out;
-		}
+	hr.style-seven:before { /* Not really supposed to work, but does */
+		display: block;
+		content: "";
+		height: 30px;
+		margin-top: -31px;
+		border-style: solid;
+		border-color: black;
+		border-width: 0 0 1px 0;
+		border-radius: 20px;
+	}
 
-		#image_trans img.transparent{
-			opacity: 0;
-		}
 
-		#image_trans_onclick{
-			cursor:pointer;
-		}
 
 	</style>
 
@@ -235,7 +238,7 @@
 			<div class="ui container">
 				<div class="ui large secondary inverted pointing menu" style="outline:none; border: 0px solid">
 					<div class="toc item">
-					<!-- <i class="sidebar icon"></i> --> asdasd
+					<!-- <i class="sidebar icon"></i> --> 
 						<div class="ui dropdown">
 							<h2><i class="sidebar icon"></i></h2>
 							<div class="menu">
@@ -333,22 +336,20 @@
 		</div>
 	</div>
 
+	<center>
+		<hr class="style-seven" /> 
+	</center>
 
-	<div class="ui vertical stripe quote segment">
-		<div class="ui equal width stackable internally celled grid">
-		<div class="center aligned row">
-			<div class="column">
-			<h3>"What a Company"</h3>
-			<p>That is what they all say about us</p>
-			</div>
-			<div class="column">
-			<h3>"I shouldn't have gone with their competitor."</h3>
-			<p>
-				<img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Nan</b> Chief Fun Officer Acme Toys
-			</p>
-			</div>
+	<div class="ui vertical stripe segment">
+
+		<h2 class="ui header centered">Services</h2>
+
+		<!-- Dito mo lagay yung mga services -->
+		<div>
+
 		</div>
-		</div>
+
+
 	</div>
 
 	<div class="ui vertical stripe segment" id="services_anchor">
@@ -362,6 +363,29 @@
 		<h3 class="ui header">Did We Tell You About Our Bananas?</h3>
 		<p>Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
 		<a class="ui large button">I'm Still Quite Interested</a>
+		</div>
+	</div>
+
+	<div class="ui vertical stripe quote segment">
+		<div class="ui equal width stackable internally celled grid">
+			<div class="center aligned row">
+				<div class="column">
+					<h2>
+						"Sunshine Farm - a happy place filled with inspiration where persons with disabilities show that they have limitless abilities. Every peso that you give is a gift of love and hope....an opportunity to make a difference. 
+						
+						In exchange, you will have the sunniest Sunflower photo you can ever have without going to France or Spain."
+					</h2>
+
+					<p>Rosanna R. Vidal</p>
+				</div>
+
+				<div class="column">
+					<h3>"I shouldn't have gone with their competitor."</h3>
+						<p>
+						<img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Nan</b> Chief Fun Officer Acme Toys
+					</p>
+				</div>
+			</div>
 		</div>
 	</div>
 
