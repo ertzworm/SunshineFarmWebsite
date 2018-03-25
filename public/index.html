@@ -168,30 +168,46 @@
 
 	</style>
 
+<link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.min.css">
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="../semantic/dist/semantic.min.js"></script>
 
+		
 		<script src="../semantic/dist/jquery-3.3.1.min.js"></script>
+		
 		<script src="../semantic/dist/components/visibility.js"></script>
 		<script src="../semantic/dist/components/sidebar.js"></script>
 		<script src="../semantic/dist/components/transition.js"></script>
-		<script src="http://cdn.jsdelivr.net/jquery.glide/1.0.6/jquery.glide.min.js"></script>
+		<script src="../semantic/dist/components/rating.js"></script>
+		<script src="../semantic/dist/components/rating.min.js"></script>
+		<script src="../semantic/dist/semantic.min.js"></script>
+
+
+		
 		<script>
-			$(document)
-				.ready(function() {
+
+
+			$(document).ready(function() {
+
+				$('.ui.rating').rating('disable');
+
+				$('.vidal_pop').popup({
+					inline:true
+				});
+
+				$('.lopez_pop').popup({
+					inline: true
+				});
+
+				$('.ui.embed').embed();
 
 				// fix menu when passed
-				$('.masthead')
-					.visibility({
-					once: false,
-					onBottomPassed: function() {
-						$('.fixed.menu').transition('fade in');
-					},
-					onBottomPassedReverse: function() {
-						$('.fixed.menu').transition('fade out');
-					}
-					})
-				;
-
 				
+
+				//Smooth scroll
 				$("a").on('click', function(event){
 					if(this.hash != ""){
 						event.preventDefault();
@@ -206,38 +222,37 @@
 					}
 				});
 
-				$('#ui.rating')
-				.rating({
-				  initialRating: 3,
-				  maxRating: 5
-				})
-			  ;
+				
+
+				$('.masthead')
+					.visibility({
+						once: false,
+						onBottomPassed: function() {
+							$('.fixed.menu').transition('fade in');
+						},
+						onBottomPassedReverse: function() {
+							$('.fixed.menu').transition('fade out');
+						}
+					})
+				;
 
 			});
 		</script>
 	</head>
 
+  
 
 	<body>
 
-	<!-- Following Menu -->
+		<!-- Following Menu -->
 	<div class="ui large top fixed hidden menu">
 		<div class="ui container">
 			<a class="item" href="#home_anchor">Home</a>
-			<a class="item">About Us</a>
-			<a class="item">Services</a>
+			<a class="item" href="#about_us_anchor">About Us</a>
+			<a class="item" href="#services_anchor">Services</a>
 			<a class="item" href="#contact_us_anchor">Contact Us</a>
 		</div>
 	</div>
-
-	<!-- Sidebar Menu -->
-	<div class="ui vertical inverted sidebar menu">
-		<a class="item">Home</a>
-		<a class="item" href="#about_us_anchor">About Us</a>
-		<a class="item">Services</a>
-		<a class="item" href="#contact_us_anchor">Contact Us</a>
-	</div>
-
 
 	<!-- Page Contents -->
 	<div class="pusher">
@@ -245,29 +260,6 @@
 
 			<div class="ui container">
 				<div class="ui large secondary inverted pointing menu" style="outline:none; border: 0px solid">
-					<div class="toc item">
-					<!-- <i class="sidebar icon"></i> --> 
-						<div class="ui dropdown">
-							<h2><i class="sidebar icon"></i></h2>
-							<div class="menu">
-								<div class="item">
-									<a href="#home_anchor" class="ui black">Home</a>
-								</div>
-
-								<div class="item">
-									<a href="#about_us_anchor" class="ui black">About Us</a>
-								</div>
-
-								<div class="item">
-									<a href="#" class="ui black">Services</a>
-								</div>
-
-								<div class="item">
-									<a href="#contact_us_anchor" class="ui black">Contact Us</a>
-								</div>
-							</div>
-						</div>
-					</div>
 				
 					<div class="item ui simple dropdown">
 						<h2><i class="sidebar icon"></i></h2>
@@ -289,25 +281,20 @@
 							</div>
 					</div>
 				</div>
-
-				
 			</div>
-
-		
 		</div>
 		
 
 		<div class="ui text container" id="home_anchor">
 			<h1 class="ui inverted header">
-				Sunshine Farm
+				Sunshine Farm Philippines
 			</h1>
-			<h2>Welcome!</h2>
-			<div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>
+			<h2>From the fields of Tiaong, Quezon, we present to you, our country's very best sunflower farm!</h2>
+			<a class="ui blue button" href="#about_us_anchor">Learn more<i class="right arrow icon"></i></a></i></a>
 		</div>
-
-
-
 	</div>
+
+	
 
 	<div class="ui vertical stripe segment" id="about_us_anchor">
 		<div class="ui middle aligned stackable grid container">
@@ -348,7 +335,7 @@
 		<hr class="style-seven" /> 
 	</center>
 
-	<div class="ui vertical stripe segment">
+	<div class="ui vertical stripe segment" id="services_anchor">
 
 		<h2 class="ui header centered">Services</h2>
 
@@ -360,17 +347,23 @@
 
 	</div>
 
+	
+
 	<div class="ui vertical stripe segment" id="services_anchor">
 		<div class="ui text container">
-		<h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
-		<p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p>
-		<a class="ui large button">Read More</a>
-		<h4 class="ui horizontal header divider">
-			<a href="#">Case Studies</a>
-		</h4>
-		<h3 class="ui header">Did We Tell You About Our Bananas?</h3>
-		<p>Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
-		<a class="ui large button">I'm Still Quite Interested</a>
+		<h3 class="ui header">Sunflower farm in Quezon plants seeds of hope for PWDs</h3>
+		<p>
+			
+			QUEZON, Philippines – More than just a business, a sunflower farm in Tiaong, Quezon empowers persons with disabilities (PWDs) by providing sustainable livelihood.
+
+			“We need to change the mindset that persons with disabilities are limited and that they can’t do anything,” said Sunshine Farm owner Rhodora Palomar-Fresnedi.
+
+			Farm manager Ben Villanueva, 44, who has polio, said his earnings from the Sunshine Farm helps him send his child to school. The farm also helps improve the lives of PWDs in Tiaong
+		</p>
+		<a class="ui large button" href="https://www.rappler.com/move-ph/198414-sunflowers-sunshine-farm-tiaong-quezon-persons-with-disability">Read More</a>
+		<h3 class="ui header">Something about Sunshine and Flowers</h3>
+		<div class="ui embed" data-url="https://www.youtube.com/embed/QdooOQ4870I" data-placeholder="../images/carousel1.jpg"></div>
+		<p class="ui centered">A showcase of exquisiteness and beauty accompanied by a one-of-a-kind experience!</p>
 		</div>
 	</div>
 	
@@ -382,32 +375,51 @@
 
 	<div class="ui vertical stripe quote segment">
 		<h2 class="ui header centered">Reviews</h2>
+		<center>
+			<div class="ui star rating" data-rating="4" data-max-rating="5"></div>
+		</center>
+		
 		<h4 class="ui centered">Rated 4.9 out of 5 stars in 89 reviews</h4>
 		<div class="ui equal width stackable internally celled grid">
 			<div class="center aligned row">
 				<div class="column">
 
-					<img class="ui image circular centered" src="../images/vidal.jpg" />
+					<img class="ui image circular centered vidal_pop" src="../images/vidal.jpg" />
+					<div class="ui popup">
+						<div class="header">User Rating</div>
+						<div class="ui star rating" data-rating="5" data-max-rating="5"></div>
+					</div>
 					
 					<p class="centered">Rosanna R. Vidal via Facebook</p>
 					Financial Advisor at Sun Life Financial Philippines
 
-					<h2>
-						"Sunshine Farm - a happy place filled with inspiration where persons with disabilities show that they have limitless abilities. Every peso that you give is a gift of love and hope....an opportunity to make a difference. 
+					<div class="ui pointing label">
+						<h4>
+							"Sunshine Farm - a happy place filled with inspiration where persons with disabilities show that they have limitless abilities. Every peso that you give is a gift of love and hope....an opportunity to make a difference. 
 						
-						In exchange, you will have the sunniest Sunflower photo you can ever have without going to France or Spain."
-					</h2>
+							In exchange, you will have the sunniest Sunflower photo you can ever have without going to France or Spain."
+						</h4>	
+					</div>
+					
 				</div>
 
 				<div class="column">
-					<img class="ui image circular centered" src="../images/lopez.jpg" />
+					<img class="ui image circular centered lopez_pop" src="../images/lopez.jpg" />
+					<div class="ui popup">
+						<div class="header">User Rating</div>
+						<div class="ui star rating" data-rating="5" data-max-rating="5"></div>
+					</div>
 					
 					<p class="centered">Ricky W. Lopez via Facebook</p>
 					Soap Maker, Marketer, Natural Beauty and Inclusiveness Advocate
+					<div class="ui pointing label">
+						<h4>
+							"Sunshine Farm is the happiest place on the planet! A Destination Farm like no other. Beautiful, joyful, inspiring! No one leaves the place without asking themselves the question - How can I make a difference by giving back to others? Kindness and love blooms in Tiaong!"
+						</h4>
+					</div>
+					
 
-					<h2>
-						"Sunshine Farm is the happiest place on the planet! A Destination Farm like no other. Beautiful, joyful, inspiring! No one leaves the place without asking themselves the question - How can I make a difference by giving back to others? Kindness and love blooms in Tiaong!"
-					</h2>
+					
 				</div>
 			</div>
 		</div>
@@ -415,9 +427,9 @@
 
 
 	<div class="ui inverted vertical footer segment" id="contact_us_anchor">
-			<h1 class="ui center aligned header">
+			<h2 class="ui center aligned header">
 			CONTACT US
-			</h1>
+			</h2>
 		<div class="ui container">    		
 		<div class="ui center aligned stackable inverted divided equal height stackable grid">
 			<div class="five wide column">
