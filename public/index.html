@@ -390,9 +390,16 @@
 			
 			});
 
+			function openModal(){
+				$('.ui.basic.modal').modal('show');
+			}
+			
+			function openSalute(){
+				$('.longer.modal').modal('show');
+			}
+
 
 			$(document).ready(function() {
-				
 
 				$('.ui.rating').rating('disable');
 
@@ -455,6 +462,96 @@
 			</div>
 		</div>
 
+		<div class="ui basic modal">
+			<div class="ui icon header">
+				Find us here!
+			</div>
+			
+			<div class="ui center centered content">
+				<p>
+					<div class="ui centered mapouter2">
+						
+						<div class="gmap_canva2s">
+							<iframe width="500" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=sunshine sunflower farm&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+						</div>
+						
+						<a href="https://www.webdesign-muenchen-pb.de">webdesign-muenchen-pb.de</a>
+						<style>
+						.mapouter2{
+							overflow:hidden;
+							height:500px;
+							width:500px;
+						}
+						
+						.gmap_canvas2{
+							background:none !important;
+							height:500px;
+							width:500px;}
+						</style>
+					</div>
+			</div>
+
+			<div class="actions">
+				<div class="ui centered red basic cancel inverted button">
+					<i class="remove icon"></i>
+						Close
+				</div>
+			</div>
+		</div>
+
+		<div class="ui longer test modal">
+				<div class="header">
+				  Sunshine Farm Salutes Women with Disabilities
+				</div>
+				<div class="scrolling image content">
+				  <div class="ui medium image">
+					
+				  </div>
+				  <div class="description">
+					<div class="ui header">March 31, 2018</div>
+					<div class="ui">
+						As the month of March comes to a close, we at Sunshine Farm Philippines salute the women with disability who make the farm possible.
+						In particular, we share with you, proudly, the story of Mary Joy Jhuyjhuy Escalora.
+					</div>
+					
+					<div>
+						One morning, when she was only 12 years old, Joy woke up unable to stand. She later found out that she has a spinal problem that took away her ability to walk, for life.
+					</div>
+
+					<div>
+						Joy then spent the next 15 years at home, going no farther than her church once or twice a week. She hardly had any interaction with people outside her small circle of family and church friends.
+					</div>
+
+					<div>
+						Three years ago, Joy joined the PWD association of Tiaong, Quezon (Sikkap PWD), expanding her social circle a little bit more. Three months ago, she started at Sunshine Farm Philippines. She works daily at our front desk, never losing that cheery disposition, no matter how challenging customer service work could become.
+					</div>
+
+					<div>
+						In the three months she’s been with our fabulous farm team, Joy has grown in confidence and capability. She has widened her social circle, and developed capabilities of a Sunshine Farm brand ambassador. To date,she’s been on the cover of Agriculture Magazine, and in television feature stories. More recently, Joy was the featured inspirational speaker at the LTO/San Pablo Office for their International Women’s Month celebration. Way to go!
+					</div>
+
+					<div>
+						It’s been quite a journey for Joy, and an uplifting one for us at Sunshine Farm Philippines. Not only does she live our message “may kakayahan ang may kapansanan” (PWDs have abilities) she also proves that PWDs like her are a great source of daily inspiration.
+					</div>
+
+					<div>
+						Thank you, Joy, for everything you are. Your story is a fitting finale for the end of March, International Women’s Month.
+					</div>
+
+					<div>
+						Thank you, LTO-San Pablo for championing women with disabilities.
+					</div>
+
+					
+				  </div>
+				</div>
+				<div class="actions">
+				  <div class="ui primary approve button">
+					Close
+					<i class="right chevron icon"></i>
+				  </div>
+				</div>
+			  </div>
 		
 
 		<!-- Page Contents -->
@@ -481,6 +578,10 @@
 
 								<div class="item">
 									<a href="#contact_us_anchor" class="ui black">Contact Us</a>
+								</div>
+
+								<div class="item">
+									<a onclick="openModal();" class="ui black">Find Us</a>
 								</div>
 						</div>
 					</div>
@@ -579,7 +680,7 @@
 
 		
 
-		<div class="ui vertical stripe segment" id="services_anchor">
+		<div class="ui vertical stripe segment">
 			<div class="ui text container">
 			<h3 class="ui header">Sunflower farm in Quezon plants seeds of hope for PWDs</h3>
 			<p>
@@ -590,7 +691,31 @@
 
 				Farm manager Ben Villanueva, 44, who has polio, said his earnings from the Sunshine Farm helps him send his child to school. The farm also helps improve the lives of PWDs in Tiaong
 			</p>
+			
 			<a class="ui large button" href="https://www.rappler.com/move-ph/198414-sunflowers-sunshine-farm-tiaong-quezon-persons-with-disability">Read More</a>
+			
+			
+			
+			
+			<h3 class="ui header">Sunshine Farm Salutes Women with Disabilities</h3>
+			<img src="../images/salute1.jpg" />
+			<p>
+					As the month of March comes to a close, we at Sunshine Farm Philippines salute the women with disability who make the farm possible. In particular, we share with you, proudly, the story of Mary Joy Jhuyjhuy Escalora.
+					One morning, when she was only 12 years old, Joy woke up unable to stand. She later found out that she has a spinal problem that took away her ability to walk, for life.
+			</p>
+
+			<a class="ui large button" href="https://www.facebook.com/SunshineFarmPH/posts/355148164971190">Read More</a>
+
+			<h3 class="ui header">The Tallest Sunflower</h3>
+			<img src="../images/tallest1.jpg" />
+			<p>
+					Look, we have a sunflower that’s over 7 feet tall! We’ve had a tall one in December, but this one’s even taller. It came from the same batch of seeds as the other plants in its plot. Same variety. Every one of them has been harvested; none, however, grew taller than a meter, which is the average height of a sunflower. And this one’s still here, a lovely freak of nature.
+			</p>
+			<a class="ui large button" href="https://www.facebook.com/SunshineFarmPH/posts/349333072219366">Read More</a>
+			
+
+			
+
 			<h3 class="ui header">Something about Sunshine and Flowers</h3>
 			<div class="ui embed" data-url="https://www.youtube.com/embed/QdooOQ4870I" data-placeholder="../images/carousel1.jpg"></div>
 			<p class="ui centered">A showcase of exquisiteness and beauty accompanied by a one-of-a-kind experience!</p>
